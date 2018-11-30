@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import pymongo
 
 app = Flask(__name__)
@@ -11,9 +11,16 @@ breeze_info = db.breeze_info
 
 @app.route('/')
 def home():
-    city_data = list(db.breeze_info.find())
+    return render_template('index.html')
 
-    return render_template('index.html', city_data = city_data)
+@app.route('/data')
+def data(): 
+    city_data = list(db.breeze_info.find())
+    new_data = []
+    for doc in city_data:
+        doc.pop('_id')
+        new_data.append(doc)
+    return jsonify(new_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
