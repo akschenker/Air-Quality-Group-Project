@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Air Quality</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Used to edit fonts e.g. w3-xxlarge -->
+  
+  
+          <!-- <style> -->
+        <!-- #image { -->
+           <!-- background-image: url("banff.jpg"); -->
+           <!-- background-color: "green"; --> 
+           <!-- background-size: 100% 100% -->
+        <!-- } -->
+        <!-- </style> -->
+
+</head>
+
+<body >
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand w3-xxlarge trigger_popup_fricc">
+        Analyzing Air Quality
+        </a>
+    </nav>
+        <div class="hover_bkgr_fricc">
+            <span class="helper"></span>
+                <div>
+                <div class="popupCloseButton">X</div>
+                    <img src="friendsCoughing.gif" alt="Coughing gif">
+                </div>
+        </div>
+
+
+    <div id="projectMotivation"> <h1>Project Motivation</h1> </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                With the recent wildfire in northern California that started in Camp Butte and proceeded to become the most destructive and deadly wildfire in California history - and which significantly affected air quality hundreds of miles away - air quality was on the forefront of our minds and we found it prudent to do analyses of the air quality of differnt cities around the world.
+                </p>
+                <img src="inNoutBeforeAndAfterParadise.jpg" alt="paradise In N Out before and after" width=90%>
+            </div>
+            <div class="col-sm-8" align="middle">
+                <img src="camp-fire-california-paradise-shopping-center.jpg" alt="camp-fire-california-paradise-shopping-center" width=70%>
+            </div>
+        </div>
+        <!-- <h1><a href="top10.html"> Top 10 Cities with the best air quality. </a></h1> -->
+        <!-- <h1><a href="worst10.html"> Worst 10 Cities with the best air quality. </a></h1> -->
+        <h1><a href="map.html"> Maps </a></h1>
+            <p>
+            Visualizing air quality data from cities around the world.
+            </p>
+        <h1><a href="graphs.html"> Graphs </a></h1> <!--<a href="map.html"></a>-->
+            <p>
+            Visualizing air quality data from the 10 cleanest and 10 most polluted cities.
+            </p>
+        
+        
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <h1> Tools </h1> <!--<a href="tools.html"></a>-->
+                <h4>A brief description of the tools we used and how we used them.</h4>
+                    <p>
+                    The tools we used in this project include:
+                        <ul>
+                            <li> Breezometer API </li>
+                            <li> Jupyter Notebook </li>
+                            <li> Flask API </li>
+                            <li> MongoDB </li>
+                            <li> HTML/CSS </li>
+                            <li> JavaScript libraries: </li>
+                                <ul>
+                                    <li> D3 (Data Driven Documents) </li>
+                                    <li> Bootstrap </li>
+                                    <li> Chart.js </li>
+                                </ul>
+                        </ul>
+                    </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <h4> Breezometer Overview</h4>
+                    <p>
+                    We used <a href="https://breezometer.com/"><u>Breezometer</u></a> to make an API call to the BreezoMeter database and extract the information we were interested in looking at. Since BreezoMeter provides <a href="https://docs.breezometer.com/api-documentation/air-quality-api/v2/#current-conditions"><u>documentation</u></a> on how to use their API, we needed to go through the documentation and figure out how we would extract the information we wanted. The API Quality API v2 parameters vary from case by case depending on which type of data you're interested in, such as air quality based on current conditions, hourly forecast, hourly history, custom API requests.
+                    </p>
+                    <p>
+                    The exact parameters that are required and optional vary case by case, and include lat, lon, key, features, meandata, and lang.
+                    </p>
+            </div>
+            <div class="col-sm-6">
+                <h4> Our design choices </h4>
+                    <p>
+                     breezometer_aqi, local_aqi, health_recommendations, sources_and_effects, pollutants_concentrations, pollutants_aqi_information"
+                    </p>
+            </div>
+        </div>
+            
+        <!-- <h1><a href="projectMotivation.html"> An interactive map with air quality information for select cities. </a></h1> -->
+        <!-- <h1><a href="challengesAndApproaches.html"> Challenges and Approaches </a></h1> -->
+            <!-- <p> -->
+            <!-- An overview of the roadblocks we ran into while doing this project, and how we approached the problem to get the best possible solution.  -->
+            <!-- </p> -->
+        <h1><a href="conclusion.html"> Results and Analysis </a></h1>
+            <p>
+            Our findings 
+            </p>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
