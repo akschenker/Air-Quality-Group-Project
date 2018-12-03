@@ -1,0 +1,111 @@
+body, html {
+    height: 100%;
+}
+
+body {
+/* background-image: url("bb.jpg"); */
+/* background-repeat: no-repeat; */
+background-color: black;
+font-family:  serif;
+color: white
+}
+
+/* #breezometer{ */
+    /* height: 743px ; */
+    /* width: 314px; */
+/* } */
+#projectMotivation{
+    /* color: purple; */
+    /* color:#808000; */
+    color: #9bcdff;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    /* color:#808000; */ /* avocado green*/
+    color: #9bcdff;
+}
+
+.navTextColor{
+    color:black
+}
+
+.navbar.navbar-dark{
+    /* background-color: #808000; /* avocado green*/ 
+    background-color: #9bcdff
+}
+
+.navbar-brand{
+    color:black;
+    font-size:24;
+    font-weight: bold;
+    font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* .w3-tangerine { */
+    /* font-family: "Tangerine", serif; */
+/* } */
+
+
+
+
+/* code for popup */
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
