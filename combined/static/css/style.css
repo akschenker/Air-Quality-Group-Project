@@ -1,0 +1,67 @@
+#top-barChart {
+    display: inline !important;
+}
+
+#bottom-barChart {
+    display: inline !important;
+}
+
+#pop-barChart {
+    display: inline !important;
+}
+
+#pieChart {
+    margin-left: 100px;
+    display: inline !important;
+}
+
+select {
+    display: block;
+    margin-left: 50px;
+}
+
+body {
+    background-color: black !important;
+}
+
+h2 {
+    text-align: center;
+    color: lightgray;
+    padding-top: 10px;
+}
+
+h4 {
+    color: lightgray;
+}
+
+.container {
+    height: 1000px;
+}
+
+html,
+body,
+#map-id {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  padding: 10px;
+  font-family: Tahoma, serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #555;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
