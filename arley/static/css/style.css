@@ -1,0 +1,39 @@
+#top-barChart {
+    display: inline !important;
+}
+
+#bottom-barChart {
+    display: inline !important;
+}
+
+#pop-barChart {
+    display: inline !important;
+}
+
+#pieChart {
+    margin-left: 100px;
+    display: inline !important;
+}
+
+select {
+    display: block;
+    margin-left: 50px;
+}
+
+body {
+    background-color: black !important;
+}
+
+h2 {
+    text-align: center;
+    color: lightgray;
+    padding-top: 10px;
+}
+
+h4 {
+    color: lightgray;
+}
+
+.container {
+    height: 1000px;
+}

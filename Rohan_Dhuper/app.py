@@ -13,9 +13,9 @@ breeze_info = db.breeze_info
 def home():
     return render_template('index.html')
 
-@app.route('/cityDash')
-def city():
-    return render_template('city.html')
+@app.route('/maps')
+def maps():
+    return render_template('maps.html')
 
 @app.route('/data')
 def data(): 
@@ -23,7 +23,6 @@ def data():
     new_data = []
     for doc in city_data:
         doc.pop('_id')
-        doc["city"] = doc["city"].title()
         new_data.append(doc)
     return jsonify(new_data)
 
