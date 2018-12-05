@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <p>
-                With the recent wildfire in northern California that started in Camp Butte and proceeded to become the most destructive and deadly wildfire in California history - and which significantly affected air quality hundreds of miles away - air quality was on the forefront of our minds and we found it prudent to do analyses of the air quality of differnt cities around the world.
+                With the recent wildfire in northern California that started in Camp Butte and proceeded to become the most destructive and deadly wildfire in California history - and which significantly affected air quality hundreds of miles away - air quality was on the forefront of our minds and we found it prudent to do analyses of the air quality of different cities around the world.
                 </p>
                 <img src="inNoutBeforeAndAfterParadise.jpg" alt="paradise In N Out before and after" width=90%>
             </div>
@@ -87,7 +87,7 @@
         
         <div class="row">
             <div class="col-sm-6">
-                <h4> Breezometer Overview</h4>
+                <h4> Breezometer Overview </h4>
                     <p>
                     We used <a href="https://breezometer.com/"><u>Breezometer</u></a> to make an API call to the BreezoMeter database and extract the information we were interested in looking at. Since BreezoMeter provides <a href="https://docs.breezometer.com/api-documentation/air-quality-api/v2/#current-conditions"><u>documentation</u></a> on how to use their API, we needed to go through the documentation and figure out how we would extract the information we wanted. The API Quality API v2 parameters vary from case by case depending on which type of data you're interested in, such as air quality based on current conditions, hourly forecast, hourly history, custom API requests.
                     </p>
@@ -102,6 +102,21 @@
                     </p>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <h4> Extracting, Sorting, and Visualizing data from Breezometer</h4>
+                    <p>
+                    To check that we could properly pull and store the data from the BreezoMeter API, we used the Jupyter notebook to insert the city latitude and longitude from the CSV and feed it into the url template provided by BreezoMeter. After ensuring we could iterate through the rows in our CSV and we could successfully enter the coordinates contained in the CSV and parameters into the BreezoMeter URL template, we wrote a Python script that would allow us to create a connection to our local MongoDB server on our machine. With this MongoDB server, we stored the data we extracted from the BreezoMeter API using the features we requested for every city in our CSV file (given BreezoMeter had data for that city).
+                    </p>
+            </div>
+            <div class="col-sm-6">
+                <h4> Visualizing Data using HTML/CSS/JavaScript </h4>
+                <p>
+                To display the data on a webpage, we needed to use JavaScript to create a function that would allow us to iterate through the data in our local MongoDB server and visualize the data. We couldn't use JavaScript to access the data in MongoDB server directly without first downloading packages/setting up buckets, so we decided to use the Flask Python Microframework to render our HTML page. Using Flask - and thus Python - allowed us to extract our MongoDB data using pymongo and store it as Python objects. We could then feed the data we stored as Python objects into the Flask interface to render our HTML page. Using Flask allowed us to address the MongoDB data extraction challenge we faced, after which it was a simple matter of formatting our CSS and writing functions in JavaScript to visualize our data the way we wanted.
+                </p>
+            </div>
+        </div>
             
         <!-- <h1><a href="projectMotivation.html"> An interactive map with air quality information for select cities. </a></h1> -->
         <!-- <h1><a href="challengesAndApproaches.html"> Challenges and Approaches </a></h1> -->
@@ -113,6 +128,8 @@
             Our findings 
             </p>
     </div>
+    
+
     
     <script src="popup.js"></script>
 </body>
