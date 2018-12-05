@@ -1,0 +1,25 @@
+#top-barChart {
+    display: inline !important;
+}
+
+#bottom-barChart {
+    display: inline !important;
+}
+
+#pop-barChart {
+    display: inline !important;
+}
+
+#pieChart {
+    margin-left: 100px;
+    display: inline !important;
+}
+
+select {
+    display: block;
+    margin-left: 150px;
+}
+
+body {
+    background-color: black !important;
+}
