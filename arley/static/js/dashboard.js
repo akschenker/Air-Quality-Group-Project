@@ -1,8 +1,4 @@
-d3.json('/data').then(function(data) {
-    makeData(data)
-});
-
-function makeData(data) {
+function makeDashboard(data) {
     data.forEach(d => {
         if (d.aqi === 0) {
             d.aqi = 0.2;
@@ -219,7 +215,7 @@ function makeData(data) {
         options: {
             responsive: false,
             title: {
-                text: `Pollutants in chelyabinsk`,
+                text: `Pollutants in Chelyabinsk`,
                 display: true,
                 fontSize: 18
             }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>City Breakdown</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="{{ url_for('static', filename='js/getData.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/city.js') }}"></script>
+  <script>getData(cityDash)</script>
+
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>City Dashboard</h2>
+          </div>
+        </div>
+      <div class="row">
+          <div class="col-lg-12">
+            <h4>Select a city:</h4>
+            <select class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+            </select>
+            </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-lg-2">
+            <div class="card text-white bg-dark mb-3" id="aqi-card">
+                <div class="card-header">Breezometer AQI</div>
+                <div class="card-body">
+                    <h3 class="card-title"></h3>
+                    <p class="card-text">0 indicates poor air quality. 100 indicates excellent air quality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <canvas id="top-barChart" width="800" height="400"></canvas>
+        </div>
+        <div class="col-lg-3">
+            <div class="card text-white bg-dark mb-3" id="rec-card">
+                <div class="card-body">
+                    <h3 class="card-title">General Recommendations</h3>
+                    <p class="card-text">0 indicates poor air quality. 100 indicates excellent air quality.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
