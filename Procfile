@@ -1,1 +1,1 @@
-web: gunicorn air-quality.app:app
+web: gunicorn air_quality.app:app
