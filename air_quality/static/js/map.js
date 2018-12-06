@@ -12,7 +12,7 @@ function makeMap(data) {
   attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
   maxZoom: 18,
   id: "mapbox.dark",
-  accessToken: API_KEY
+  accessToken: "pk.eyJ1IjoiYWtzY2hlbmtlciIsImEiOiJjam9qaW8wd3gwNWw2M2twYTkzb2l5NGhtIn0.RyQjIxRxHo6Jjc2X72-mPw"
   });
   var layers = {
     poor: new L.LayerGroup(),
