@@ -9,7 +9,7 @@ if not conn:
     conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 
-db = client.citiesDB
+db = client.heroku_wsm7h7qj
 breeze_info = db.breeze_info
 
 @app.route('/')
