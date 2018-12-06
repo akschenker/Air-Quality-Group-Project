@@ -4,7 +4,7 @@ import pymongo
 app = Flask(__name__)
 
 conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
+client = pymongo.MongoClient(conn | MONGODB_URI)
 
 db = client.citiesDB
 breeze_info = db.breeze_info
@@ -13,9 +13,17 @@ breeze_info = db.breeze_info
 def home():
     return render_template('index.html')
 
+@app.route('/map')
+def maps():
+    return render_template('map.html')
+
 @app.route('/cityDash')
 def city():
-    return render_template('city.html')
+    return render_template('cityDash.html')
+
+@app.route('/graphs')
+def graphs():
+    return render_template('graphs.html')
 
 @app.route('/data')
 def data(): 
