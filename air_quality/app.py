@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-conn = os.environ.get('MONGO_URI')
+conn = os.environ.get('MONGODB_URI')
 if not conn:
     conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
