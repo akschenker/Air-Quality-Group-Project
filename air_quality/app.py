@@ -1,10 +1,13 @@
 from flask import Flask, render_template, jsonify
 import pymongo
+import os
 
 app = Flask(__name__)
 
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn | MONGODB_URI)
+conn = os.environ.get('MONGO_URI')
+if not conn:
+    conn = 'mongodb://localhost:27017'
+client = pymongo.MongoClient(conn)
 
 db = client.citiesDB
 breeze_info = db.breeze_info
