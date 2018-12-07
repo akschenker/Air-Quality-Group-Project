@@ -115,4 +115,30 @@ h1, h2, h3, h4, h5, h6{
     display: inline-block;
     font-weight: bold;
 }
+
 /* Popup box BEGIN */
+
+/* formatting a tags: https://www.w3schools.com/css/css_link.asp */
+a:link {
+    color: #0340DA;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    /* color: #942AC1; */ /* purple link text after visiting page*/
+    color: #0340DA;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+    /* text-decoration: none; */
+  }
+  
+  /* selected link */
+  a:active {
+    color: red;
+    text-decoration: none;
+  }
