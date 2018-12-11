@@ -10,23 +10,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/home-style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Used to edit fonts e.g. w3-xxlarge -->
-  
-  
-          <!-- <style> -->
-        <!-- #image { -->
-           <!-- background-image: url("banff.jpg"); -->
-           <!-- background-color: "green"; --> 
-           <!-- background-size: 100% 100% -->
-        <!-- } -->
-        <!-- </style> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
 
 <body >
+<div class="container bootstrap snippet">
     <nav class="navbar navbar-dark">
-        <a class="navbar-brand w3-xxlarge trigger_popup_fricc">
-        Analyzing Air Quality
-        </a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand w3-xxlarge trigger_popup_fricc">
+                <i class="fas fa-dove"></i>
+                Analyzing Air Quality
+                </a>
+            </div>
+        </div>
     </nav>
         <div class="hover_bkgr_fricc">
             <span class="helper"></span>
@@ -36,126 +34,155 @@
                 </div>
         </div>
 
-
     <div id="projectMotivation"> <h1>Project Motivation</h1> </div>
         <div class="row">
-            <div class="col-sm-4">
-                <p>
-                With the recent wildfire in northern California that started in Camp Butte and proceeded to become the most destructive and deadly wildfire in California history - and which significantly affected air quality hundreds of miles away - air quality was on the forefront of our minds and we found it prudent to do analyses of the air quality of different cities around the world. We were interested in analyzing the air quality of different cities around the world to see how the air quality differed from place to place, and we wanted to use a database that would give us different parameters of measuring the air quality. After looking around, we found BreezoMeter to be a great resource for our project, as it provided an API for extracting air quality information based on the parameters we wanted. BreezoMeter also created a standardized air quality index, which according to its <a href="https://breezometer.com/faq/">FAQ</a> page, is created by doing the following:
-                </p>
-                <p>
-                What does the air quality index (AQI) mean?
-                </p>
-                <p style="text-indent: 2em">
-                An air quality index (AQI) is a number used to communicate how polluted the air currently is or how polluted it is forecasted to become. Today, there is no standardized approach to providing air quality information globally, meaning AQIs are usually different from country to country. BreezoMeter has created a new uniform index: the BreezoMeter Air Quality Index (BAQI). The BAQI values range between 100 (Excellent air quality) and 0 (Poor air quality), and are determined based on concentrations of predefined air pollutants depending on local standards (read more). In addition to the BAQI, the Local AQI is always available as well.
-                </p>
-                <img src="../static/images/inNoutBeforeAndAfterParadise.jpg" alt="paradise In N Out before and after" width=90%>
-            </div>
-            <div class="col-sm-8" align="middle">
-                <img src="../static/images/camp-fire-california-paradise-shopping-center.jpg" alt="camp-fire-california-paradise-shopping-center" width=70%>
-            </div>
-        </div>
-        <!-- <h1><a href="top10.html"> Top 10 Cities with the best air quality. </a></h1> -->
-        <!-- <h1><a href="worst10.html"> Worst 10 Cities with the best air quality. </a></h1> -->
-        <h1><a href="/map"> Maps </a></h1>
-            <p>
-                Visualizes air quality data from cities around the world; created using the Leaflet JavaScript library and MapBox tiles. 
-            </p>
-        <h1><a href="/graphs"> Graphs </a></h1> <!--<a href="map.html"></a>-->
-            <p>
-                Visualizes air quality data from the 10 highest rated and 10 lowest rated cities, along with air quality data from the 10 most populous cities.
-            </p>
-        <h1><a href="/cityDash"> City Dashboard </a></h1> <!--<a href="map.html"></a>-->
-            <p>
-            Visualizing air quality data from each city at a time.
-            </p>
-
-            <div class="row">
-                <div class="col-sm-7">
-                    <h4> Breezometer Overview </h4>
-                        <p>
-                        We used <a href="https://breezometer.com/" target="_blank">Breezometer</a> to make an API call to the BreezoMeter database and extract the information we were interested in looking at. Since BreezoMeter provides <a href="https://docs.breezometer.com/api-documentation/air-quality-api/v2/#current-conditions" target="_blank">documentation</a> on how to use their API, we needed to go through the documentation and figure out how we would extract the information we wanted. The API Quality API v2 parameters vary from case by case depending on which type of data you're interested in, such as air quality based on current conditions, hourly forecast, hourly history, custom API requests.
-                        </p>
-                        <p>
-                        The exact parameters that are required and optional vary case by case, and include lat, lon, key, features, meandata, and lang. The lat, long, and key are required, while all other parameters are optional.
-                        </p>
-                </div>
-                <div class="col-sm-5">
-                    <h4> Our BreezoMeter Parameters </h4>
-                        <p>
-                         <ul>
-                            <li>breezometer_aqi</li>
-                            <li>local_aqi</li>
-                            <li>health_recommendation</li>
-                            <li>sources_and_effects</li>
-                            <li>pollutants_concentrations</li>
-                            <li>pollutants_aqi_information</li>
-                         </ul>
-                        </p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-sm-6">
-                    <h4> Tools </h4>
-                        <p>
-                        The tools we used in this project include:
-                            <ul>
-                                <li><a href="https://breezometer.com/"> Breezometer API </a></li>
-                                <li><a href="http://jupyter.org/"> Jupyter Notebook </a></li>
-                                <li><a href="http://flask.pocoo.org/" target="_blank"> Flask API </a></li>
-                                <li><a href="https://www.mongodb.com/"> MongoDB </a></li>
-                                <li><a href="https://www.w3schools.com/html/"> HTML/CSS </a></li>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> JavaScript libraries: </a></li>
-                                    <ul>
-                                        <li><a href="https://d3js.org/"> D3 (Data Driven Documents) </a></li>
-                                        <li><a href="https://getbootstrap.com/"> Bootstrap </a></li>
-                                        <li><a href="https://www.chartjs.org/"> Chart.js </a></li>
-                                        <li><a href="https://leafletjs.com/"> Leaflet </a></li>
-                                    </ul>
-                            </ul>
-                        </p>
-                </div>
-                <div class="col-sm-6">
-                    <h4> Extracting, Sorting, and Visualizing data from Breezometer</h4>
-                            <p>
-                            To check that we could properly pull and store the data from the BreezoMeter API, we used the Jupyter notebook to insert the city latitude and longitude from the CSV and feed it into the url template provided by BreezoMeter. After ensuring we could iterate through the rows in our CSV and we could successfully enter the coordinates contained in the CSV and parameters into the BreezoMeter URL template, we wrote a <a href="../static/images/pythonScript.png" target="_blank">Python script</a> that would allow us to create a connection to our local MongoDB server on our machine. With this MongoDB server, we stored the data we extracted from the BreezoMeter API using the features we requested for every city in our CSV file (given BreezoMeter had data for that city).
-                            </p>
-                </div>
-                <div class="col-sm-6">
-                    <h4> Visualizing Data using HTML/CSS/JavaScript </h4>
-                        <p>
-                        To display the data on a webpage, we needed to use JavaScript to create a function that would allow us to iterate through the data in our local MongoDB server and visualize the data. We decided to use the <a href="http://flask.pocoo.org/" target="_blank">Flask Python Microframework</a>, specifically the <a href="https://flask-pymongo.readthedocs.io/en/latest/" target="_blank">Flask-PyMongo</a> interface, to render our HTML page and streamline the process of creating our webpage. An alternative would have been to use the Node.js module to access the data in MongoDB server directly, but doing so required either installing all the dependencies locally and ensuring anyone who tried to access the webpage also had the dependencies (so we would have to include the dependencies in our upload to a site such as GitHub), or to use the <a href="https://www.npmjs.com/package/express-cdn" target="_blank">express-cdn</a> system to deploy the webpage using the geographically closest <a href="https://www.webopedia.com/TERM/C/CDN.html" target="_blank">CDN</a> server to the user . Using Flask - and thus Python - allowed us to extract our MongoDB data using pymongo and store it as Python objects. We could then feed the data we stored as Python objects into the Flask interface to render our HTML page. Using Flask allowed us to address the MongoDB data extraction challenge we faced, after which it was a simple matter of formatting our CSS and writing functions in JavaScript to visualize our data the way we wanted.
-                        </p>
-                </div>
-                <div class="col-sm-6">
-                    <h4>Making the website accessible without local dependencies</h4>
-                        <p>
-                        Since we established a local connection to MongoDB via port 27017 (conn = 'mongodb://localhost:27017'), queried BreezoMeter, and added the data we extracted from BreezoMeter to our local instance of MongoDB, we relied on having all the databases in the correct reference folder, labeled precisely the same way, and called on exactly the same way. This worked fine since we had all the data we needed in the right places (e.g. raw CSV data in the working directory and MongoDB installed, configured, and running via "mongod") and a package we could use to run the Python script (such as the <a href="https://www.anaconda.com/download/" target="_blank">Anaconda</a> distribution) along with the Flask framework <a href="https://pypi.org/project/Flask/" target="_blank">installed</a>. Heroku is a server that allowed us to remotely deploy all our dependencies on that server, and then the server would render the webpage for anyone that visited without requiring them to have the aforementioned dependencies installed.
-                        </p>
-                </div>
-            </div>
-            
-        <!-- <h1><a href="projectMotivation.html"> An interactive map with air quality information for select cities. </a></h1> -->
-        <!-- <h1><a href="challengesAndApproaches.html"> Challenges and Approaches </a></h1> -->
-            <!-- <p> -->
-            <!-- An overview of the roadblocks we ran into while doing this project, and how we approached the problem to get the best possible solution.  -->
-            <!-- </p> -->
-            <div class="row">
-                <div class="col-md-6">
-                <h1>Results and Analysis</h1>
-                <p>
-                    Our findings indicate that the air quality in densely populated cities tend to be worse on the Indian sub-continent and along east-Asia, and slightly better in the Western Hemisphere. However, this data is not necessarily reflective of the air quality of large regions of land since the data we analyzed only consisted of cities with populations of more than half a million people.
+            <div class="col-md-4 roundTop">
+                <div class="excludeImage" style="background-color:#5c7c7c"> 
+                    <p>
+                    With the recent wildfire in northern California that started in Camp Butte and proceeded to become the most destructive and deadly wildfire in California history - and which significantly affected air quality hundreds of miles away - air quality was on the forefront of our minds and we found it prudent to do analyses of the air quality of different cities around the world. We were interested in analyzing the air quality of different cities around the world to see how the air quality differed from place to place, and we wanted to use a database that would give us different parameters of measuring the air quality. After looking around, we found BreezoMeter to be a great resource for our project, as it provided an API for extracting air quality information based on the parameters we wanted. BreezoMeter also created a standardized air quality index, which according to its <a href="https://breezometer.com/faq/">FAQ</a> page, is created by doing the following:
                     </p>
                     <p>
-                    We noticed air quality and the city population did not correlate, as Tokyo, the most populous city in our database, had "good" air quality
+                    What does the air quality index (AQI) mean?
+                    </p>
+                    <p style="text-indent: 2em">
+                    An air quality index (AQI) is a number used to communicate how polluted the air currently is or how polluted it is forecasted to become. Today, there is no standardized approach to providing air quality information globally, meaning AQIs are usually different from country to country. BreezoMeter has created a new uniform index: the BreezoMeter Air Quality Index (BAQI). The BAQI values range between 100 (Excellent air quality) and 0 (Poor air quality), and are determined based on concentrations of predefined air pollutants depending on local standards (read more). In addition to the BAQI, the Local AQI is always available as well.
                     </p>
                 </div>
+                <img src="../static/images/inNoutBeforeAndAfterParadise.jpg" alt="paradise In N Out before and after" width=100%>
             </div>
+            
+            <div class="col-md-8" align="middle">
+                <img src="../static/images/camp-fire-california-paradise-shopping-center.jpg" alt="camp-fire-california-paradise-shopping-center" width=100%>
+            </div>
+        </div>
+    
+    <br>
+    
+    <div class="row">
+        <div class="col-md-6 rounded" style="background-color:#5c7c7c"> <!--style="background-color:#a79bcb"-->
+            <h1><a href="/map"> Map </a></h1>
+                <p>
+                    Visualizes air quality data from cities around the world; created using the <a href="https://github.com/Leaflet/Leaflet">Leaflet JavaScript library</a> and <a href="https://www.mapbox.com/help/define-tileset/">MapBox tiles</a>. 
+                </p>
+            <h1><a href="/graphs"> Graphs </a></h1> <!--<a href="map.html"></a>-->
+                <p>
+                    Visualizes air quality data from the 10 highest rated and 10 lowest rated cities, along with air quality data from the 10 most populous cities.
+                </p>
+            <h1><a href="/cityDash"> City Dashboard </a></h1> <!--<a href="map.html"></a>-->
+                <p>
+                Visualizes air quality data from the available database one at a time.
+                </p>
+        </div>
     </div>
     
-
+    <br>
     
-    <script src="../static/js/popup.js"></script>
+    <div class="row">
+        <div class="col-md-6 rounded" style="background-color:#5c7c7c">
+            <h4> Breezometer Overview </h4>
+                <p>
+                    We used <a href="https://breezometer.com/" target="_blank">Breezometer</a> to make an API call to the BreezoMeter database and extract the information we were interested in looking at. Since BreezoMeter provides <a href="https://docs.breezometer.com/api-documentation/air-quality-api/v2/#current-conditions" target="_blank">documentation</a> on how to use their API, we needed to go through the documentation and figure out how we would extract the information we wanted. The API Quality API v2 parameters vary from case by case depending on which type of data you're interested in, such as air quality based on current conditions, hourly forecast, hourly history, custom API requests.
+                </p>
+                <p>
+                    The exact parameters that are required and optional vary case by case, and include lat, lon, key, features, meandata, and lang. The lat, long, and key are required, while all other parameters are optional.
+                </p>
+        </div>
+        
+        <div class="col-md-6 rounded" style="background-color:#5e2624"> <!--gray background: style="background-color:#828282"-->
+            <h4> Our BreezoMeter Parameters </h4>
+                <p>
+                    <ul>
+                        <li>breezometer_aqi</li>
+                        <li>local_aqi</li>
+                        <li>health_recommendation</li>
+                        <li>sources_and_effects</li>
+                        <li>pollutants_concentrations</li>
+                        <li>pollutants_aqi_information</li>
+                    </ul>
+                </p>
+        </div>
+    </div>
+
+  
+    <div class="row">
+        <div class="col-md-6 rounded" style="color:white">
+            <h4> Tools </h4>
+                <p>
+                The tools we used in this project include:
+                    <ul>
+                        <li><a href="https://breezometer.com/"> Breezometer API </a></li>
+                        <li><a href="https://www.mapbox.com/"> Mapbox </a></li>
+                        <li><a href="http://jupyter.org/"> Jupyter Notebook </a></li>
+                        <li><a href="http://flask.pocoo.org/" target="_blank"> Flask API </a></li>
+                        <li><a href="https://www.mongodb.com/"> MongoDB </a></li>
+                        <li><a href="https://www.w3schools.com/html/"> HTML/CSS </a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> JavaScript libraries: </a></li>
+                            <ul>
+                                <li><a href="https://d3js.org/"> D3 (Data Driven Documents) </a></li>
+                                <li><a href="https://getbootstrap.com/"> Bootstrap </a></li>
+                                <li><a href="https://www.chartjs.org/"> Chart.js </a></li>
+                                <li><a href="https://leafletjs.com/"> Leaflet </a></li>
+                            </ul>
+                    </ul>
+                </p>
+        </div>
+    
+        <div class="col-md-6">
+        </div>
+        
+        <div class="col-md-6 rounded" style="background-color:#5e2624">
+            <h4> Extracting, Sorting, and Visualizing data from Breezometer</h4>
+                <p style="color:#b2b2b2">
+                    To check that we could properly pull and store the data from the BreezoMeter API, we used the Jupyter notebook to insert the city latitude and longitude from the CSV and feed it into the url template provided by BreezoMeter. After ensuring we could iterate through the rows in our CSV and we could successfully enter the coordinates contained in the CSV and parameters into the BreezoMeter URL template, we wrote a <a href="../static/images/pythonScript.png" target="_blank">Python script</a> that would allow us to create a connection to our local MongoDB server on our machine. With this MongoDB server, we stored the data we extracted from the BreezoMeter API using the features we requested for every city in our CSV file (given BreezoMeter had data for that city).
+                </p>
+            <h4> Visualizing Data using HTML/CSS/JavaScript </h4>
+                <p style="color:#b2b2b2">
+                    To display the data on a webpage, we needed to use JavaScript to create a function that would allow us to iterate through the data in our local MongoDB server and visualize the data. We decided to use the <a href="http://flask.pocoo.org/" target="_blank">Flask Python Microframework</a>, specifically the <a href="https://flask-pymongo.readthedocs.io/en/latest/" target="_blank">Flask-PyMongo</a> interface, to render our HTML page and streamline the process of creating our webpage. An alternative would have been to use the Node.js module to access the data in MongoDB server directly, but doing so required either installing all the dependencies locally and ensuring anyone who tried to access the webpage also had the dependencies (so we would have to include the dependencies in our upload to a site such as GitHub), or to use the <a href="https://www.npmjs.com/package/express-cdn" target="_blank">express-cdn</a> system to deploy the webpage using the geographically closest <a href="https://www.webopedia.com/TERM/C/CDN.html" target="_blank">CDN</a> server to the user . Using Flask - and thus Python - allowed us to extract our MongoDB data using pymongo and store it as Python objects. We could then feed the data we stored as Python objects into the Flask interface to render our HTML page. Using Flask allowed us to address the MongoDB data extraction challenge we faced, after which it was a simple matter of formatting our CSS and writing functions in JavaScript to visualize our data the way we wanted.
+                </p>
+            <h4>Making the website accessible without local dependencies</h4>
+                <p style="color:#b2b2b2">
+                    Since we established a local connection to MongoDB via port 27017 (conn = 'mongodb://localhost:27017'), queried BreezoMeter, and added the data we extracted from BreezoMeter to our local instance of MongoDB, we relied on having all the databases in the correct reference folder, labeled precisely the same way, and called on exactly the same way. This worked fine since we had all the data we needed in the right places (e.g. raw CSV data in the working directory and MongoDB installed, configured, and running via "mongod") and a package we could use to run the Python script (such as the <a href="https://www.anaconda.com/download/" target="_blank">Anaconda</a> distribution) along with the Flask framework <a href="https://pypi.org/project/Flask/" target="_blank">installed</a>. Heroku is a server that allowed us to remotely deploy all our dependencies on that server, and then the server would render the webpage for anyone that visited without requiring them to have the aforementioned dependencies installed.
+                </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 rounded servive-block-sea"> <!--style="background-color: #a79bcb"-->
+            <h1 id="resultsAndAnalysis">Results and Analysis</h1>
+                <p>
+                    Our findings indicate that the air quality in densely populated cities tend to be worse on the Indian sub-continent and along east-Asia, and slightly better in the Western Hemisphere. However, this data is not necessarily reflective of the air quality of large regions of land since the data we analyzed only consisted of cities with populations of more than half a million people.
+                </p>
+                <p>
+                    We noticed air quality and the city population did not correlate, as Tokyo, the most populous city in our database, had "good" air quality, despite having a population of over 30 million people.
+                </p>
+        </div>
+    </div>
+        <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <div class="footer fixed-bottom footerCustom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 rounded" style="background-color:indigo">
+            <div style="color:white">
+                Created by
+                <br><a href="https://github.com/akschenker"> Arley Schenker</a>
+                |<a href="https://github.com/lvdmit"> Larisa Dmitrieva</a>
+                |<a href="https://github.com/rdhuper"> Rohan Dhuper</a>
+                |<a href="https://github.com/Shail-Shouryya"> Shail Shouryya</a>
+            </div>
+            <!-- Copyright -->
+
+        </div>
+    <!-- Footer -->
+    </div>
+
+</div>
+
+<script src="../static/js/popup.js"></script>
 </body>
+
+
 </html>
