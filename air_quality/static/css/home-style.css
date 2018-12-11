@@ -26,12 +26,7 @@ body, html {
     vertical-align: middle;
     float: none;
 }
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-}
+
 
 body{
 /* background-image: url("bb.jpg"); */
@@ -41,10 +36,7 @@ font-family:  serif;
 color:black;
 }
 
-/* #breezometer{ */
-    /* height: 743px ; */
-    /* width: 314px; */
-/* } */
+
 #projectMotivation{
     /* color: purple; */
     /* color:#808000; */
