@@ -24,13 +24,13 @@ We used a wide range of tools with differing use cases to complete this project.
 * [Mapbox](https://www.mapbox.com/)
 * [Jupyter Notebook](http://jupyter.org/)
 * Python ([Pandas](https://pandas.pydata.org/pandas-docs/stable/), [Flask](https://flask-pymongo.readthedocs.io/en/latest/))
-* (MongoDB)[https://www.mongodb.com/]
+* [MongoDB](https://www.mongodb.com/)
 * [HTML](https://www.w3schools.com/html/)/CSS
 * JavaScript libraries:
   * [D3 (Data Driven Documents)](https://d3js.org/)
   * [Chart.js](https://www.chartjs.org/)
-  * [Bootstrap] (https://getbootstrap.com/)
-  * [Leaflet] (https://leafletjs.com/)
+  * [Bootstrap](https://getbootstrap.com/)
+  * [Leaflet](https://leafletjs.com/)
 
 ### Brief overview of tool usage
  1. We used Jupyter Notebook to insert the city latitude and longitude parameters from the CSV and feed it into the URL template provided by BreezoMeter. 
