@@ -11,7 +11,7 @@ An air quality index (AQI) is a number used to communicate how polluted the air 
 ### Challenges
 Challenges we faced included: 
 1) Limited capabilty with the trial API:
-  - Query limited to ###number of cities.
+  - Query limited to 1000 cities per day during the trial.
   - 14 day free-trial placed a limit on our ability to collect the most up to date data. 
 2) Ensuring all group members stored the same data within their local MongoDB server since each API call would return updated data.  
 3) Deploying the Flask app to Heroku to run without having to run on local server everytime.
@@ -24,13 +24,13 @@ We used a wide range of tools with differing use cases to complete this project.
 * [Mapbox](https://www.mapbox.com/)
 * [Jupyter Notebook](http://jupyter.org/)
 * Python ([Pandas](https://pandas.pydata.org/pandas-docs/stable/), [Flask](https://flask-pymongo.readthedocs.io/en/latest/))
-* (MongoDB)[https://www.mongodb.com/]
+* [MongoDB](https://www.mongodb.com/)
 * [HTML](https://www.w3schools.com/html/)/CSS
 * JavaScript libraries:
   * [D3 (Data Driven Documents)](https://d3js.org/)
   * [Chart.js](https://www.chartjs.org/)
-  * [Bootstrap] (https://getbootstrap.com/)
-  * [Leaflet] (https://leafletjs.com/)
+  * [Bootstrap](https://getbootstrap.com/)
+  * [Leaflet](https://leafletjs.com/)
 
 ### Brief overview of tool usage
  1. We used Jupyter Notebook to insert the city latitude and longitude parameters from the CSV and feed it into the URL template provided by BreezoMeter. 
