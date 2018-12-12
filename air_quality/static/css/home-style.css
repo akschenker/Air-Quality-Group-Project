@@ -61,9 +61,9 @@ h1, h2, h3, h4, h5, h6{
     color:black
 }
 
-.navbar.navbar-dark {
+/* .navbar.navbar-dark {
     background-color: #9bcdff
-}
+} */
 
 .navbar-brand {
     color:white;
@@ -130,7 +130,6 @@ h1, h2, h3, h4, h5, h6{
 .trigger_popup_fricc {
     cursor: pointer;
     font-size: 20px;
-    margin: 20px;
     color: white;
     display: inline-block;
     font-weight: bold;
