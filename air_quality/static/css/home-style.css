@@ -28,47 +28,45 @@ body, html {
 }
 
 
-body{
+body {
 /* background-image: url("bb.jpg"); */
 /* background-repeat: no-repeat; */
 background-color: black;
-font-family:  serif;
-color:black;
+/* font-family:  serif; */
+/* color:white; */
 }
 
 
-#projectMotivation{
+/* #projectMotivation{ */
     /* color: purple; */
     /* color:#808000; */
-    color: #9bcdff;
-    text-align: center;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 5em;
-}
+    /* color: #e5f1fd; */
+    /* text-align: center; */
+    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
+    /* font-size: 5em; */
+/* } */
 
-#resultsAndAnalysis{
+/* #resultsAndAnalysis{
     color:#000000;
     font-variant:small-caps;
-}
+} */
 
 
 h1, h2, h3, h4, h5, h6{
-    /* color:#808000; */ /* avocado green*/
-    color: #9bcdff;
-    font-weight: 900;
+    color: lightgray;
+    text-align: center;
 }
 
-.navTextColor{
+.navTextColor {
     color:black
 }
 
-.navbar.navbar-dark{
-    /* background-color: #808000; /* avocado green*/ 
+/* .navbar.navbar-dark {
     background-color: #9bcdff
-}
+} */
 
-.navbar-brand{
-    color:black;
+.navbar-brand {
+    color:white;
     font-size:24;
     font-weight: bold;
     font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -132,7 +130,7 @@ h1, h2, h3, h4, h5, h6{
 .trigger_popup_fricc {
     cursor: pointer;
     font-size: 20px;
-    margin: 20px;
+    color: white;
     display: inline-block;
     font-weight: bold;
 }
@@ -143,14 +141,15 @@ h1, h2, h3, h4, h5, h6{
 a:link {
     /* color: #0340DA; */ /* dark blue */
     /* color: #808080; */ /* gray */
-    color: #3566e1; /* light blue */
+    color: lightblue; /* light blue */
     text-decoration: none;
   }
   
   /* visited link */
   a:visited {
     /* color: #942AC1; */ /* purple link text after visiting page*/
-    color: #0340DA;
+    /* color: #0340DA; */
+    color: lightblue;
     text-decoration: none;
   }
   
